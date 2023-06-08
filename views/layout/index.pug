@@ -1,0 +1,20 @@
+doctype html
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{pagina} | #{nombreSitio}
+        link(rel="stylesheet", href="/css/style.css")
+        //- Slider
+        link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css')
+        if(css)
+            link(rel='stylesheet', href='/css/internal.css')
+
+    body 
+        include header
+        block contenido
+        a(href="https://api.whatsapp.com/send?phone=5212295201849&text=Hola%20WebTech%20%F0%9F%91%8B%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios.%20" target="_blank") 
+            img(src="/img/icons/whatsapp.svg", alt="Whatsapp", id="whatsapp")
+        include ../components/footer-gallery
+        include footer

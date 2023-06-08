@@ -1,0 +1,138 @@
+extends ./layout/index
+
+block contenido
+    main.hero 
+        .container 
+            .hero-text 
+                h1
+                    | Convertimos tus ideas en plataformas 
+                    span.gradient web
+                p Brindamos un servicio completo de diseño y desarrollo web profesional, tiendas online y posicionamiento SEO en Veracruz, México.
+                .flex.gap-16
+                    a.btn.primary-btn(href="#") Contáctanos
+                    a.btn.secondary-btn Ver Portafolio 
+            .hero-img
+                img(src="/img/capitol-mockup.png", alt="", class="img-fluid")
+            .shadow 
+    
+    section.servicios 
+        .container 
+            .heading
+                h2 
+                    | Nuestros 
+                    span.gradient Servicios
+
+                a(href="/portafolio", class="btn secondary-btn") Ver Todos 
+            .contenedor-servicios 
+                a(href="#") 
+                    .servicio.website
+                        h4 Servicio
+                        h3 Sitio Web
+                        img(src="/img/services/mockup-1.png", alt="Desarrollo Web", class="left")
+                        img(src="/img/services/mockup-2.png", alt="Desarrollo Web Veracruz", class="right")
+                a(href="#") 
+                    .servicio.landing
+                        h4 Servicio
+                        h3 Landing Page
+                        img(src="/img/services/mockup-1.png", alt="Desarrollo Web", class="left")
+                        img(src="/img/services/mockup-2.png", alt="Desarrollo Web Veracruz", class="right")
+                a(href="#") 
+                    .servicio.tienda
+                        h4 Servicio
+                        h3 Tienda Online
+                        img(src="/img/services/mockup-1.png", alt="Desarrollo Web", class="left")
+                        img(src="/img/services/mockup-2.png", alt="Desarrollo Web Veracruz", class="right")
+                a(href="#") 
+                    .servicio.app
+                        h4 Servicio
+                        h3 Web App’s
+                        img(src="/img/services/mockup-1.png", alt="Desarrollo Web", class="left")
+                        img(src="/img/services/mockup-2.png", alt="Desarrollo Web Veracruz", class="right")
+
+    section.nosotros 
+        .container 
+            .about-img
+                img(src="/img/about.jpg", alt="Agencia de desarrollo web en Veracruz" class="img-fluid")
+            .about-text
+                h2 
+                    |Conoce más sobre 
+                    span.gradient Nosotros
+                p Somos una agencia de servicios digitales enfocada en el desarrollo Web. Nos encargamos de diseñar y desarrollar plataformas web completamente a medida de tus necesidades. Si has decido dar el salto a internet o si ya lo hiciste pero quieres mejorar lo que tienes, no busques más, nosotros podemos ayudarte.
+                .flex.space-between
+                    .number 
+                        h3 80+ 
+                        p Proyectos
+                    .number 
+                        h3 45+ 
+                        p Clientes Felices
+                    .number 
+                        h3 4+ 
+                        p Años de experiencia
+    
+    section.clientes 
+        .container 
+            .clientes-text 
+                h2 
+                    |Algunos de nuestros 
+                    span.gradient Clientes
+                p Sabemos que es importante por lo que contamos con expertos para atender cualquier necesidad digital que puedas tener.¡Descubre algunos de los proyectos que hemos realizado de la mano con nuestros clientes!
+                a.btn.primary-btn(href="#") Saber Más
+            .clientes-logo 
+                .logo 
+                    img(src="/img/clients/hilton.png", alt="")
+                .logo 
+                    img(src="/img/clients/city-express.png", alt="")
+                .logo 
+                    img(src="/img/clients/qer.png", alt="")
+                .logo 
+                    img(src="/img/clients/addme.png", alt="")
+                .logo 
+                    img(src="/img/clients/capitol-business.png", alt="")
+                .logo 
+                    img(src="/img/clients/creamigas.png", alt="")
+
+
+    section.portafolio 
+        .container 
+            h2 
+                |Nuestro 
+                span.gradient Portafolio
+            .portafolios-container  
+                each portafolio in portafolios
+                    a(href=`/portafolio/${portafolio.slug}`) 
+                        .portafolio.card(style=`background-image:url("/img/portafolio/${portafolio.imagen}.png");`)
+
+
+    
+    section.feautures 
+        .container 
+                h2 
+                    |¿Por qué 
+                    span.gradient Nosotros?
+                .feautures-container 
+                    .feauture-card
+                        img(src="img/diseno-unico.svg", alt="")
+                        h4 Diseño Unico
+                        p Diseñamos desde cero y de la mano con nuestros clientes su sitio web para que este pueda reflejar lo que se quiere comunicar a los usuarios.
+                    .feauture-card
+                        img(src="img/servicio-360.svg", alt="")
+                        h4 Servicio 360º
+                        p Ofrecemos todos los servicios necesario para entregar un sitio web de calidad y optimizado para su velocidad y posicionamiento SEO.
+                    .feauture-card
+                        img(src="img/clientes.svg", alt="")
+                        h4 Clientes Satisfechos
+                        p Para nosotros lo más importante es el éxito de tu proyecto, esto nos ha permitido llegar a más de 60 clientes en México, Canada y Estados Unidos.
+
+    section.cta 
+        .cta-image
+            img(src="/img/banner.jpg", alt="", class="img-fluid") 
+        .cta-body 
+            h2 
+                | ¡Hagamos algo increíble 
+                span.gradient juntos!
+            a(href="/contacto", class="cta-button")
+                svg(width='29' height='29' viewbox='0 0 29 29' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M7.19355 22.3676C6.86812 22.0027 6.841 21.43 7.11219 21.0304L7.19355 20.9261L20.0499 6.51055C20.4049 6.11248 20.9805 6.11248 21.3355 6.51055C21.6609 6.87545 21.6881 7.44818 21.4169 7.84772L21.3355 7.9521L8.47918 22.3676C8.12416 22.7657 7.54857 22.7657 7.19355 22.3676Z' fill='white' stroke='white')
+                    path(d='M10.346 8.27514C9.84391 8.27635 9.43602 7.82097 9.43494 7.25801C9.43396 6.74623 9.76952 6.32173 10.2077 6.24786L10.3421 6.23649L20.6906 6.2115C21.1483 6.21039 21.5276 6.58881 21.592 7.08185L21.6016 7.23294L21.5802 18.8374C21.5791 19.4004 21.1713 19.8558 20.6692 19.8546C20.2128 19.8536 19.8356 19.4755 19.7716 18.9838L19.762 18.8332L19.781 8.25231L10.346 8.27514Z' fill='white' stroke='white')
+                |Contactanos
+

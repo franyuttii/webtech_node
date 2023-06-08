@@ -1,0 +1,29 @@
+extends ./layout/index
+
+block contenido
+    h1 #pagina
+    each testimonial in testimoniales 
+        p= testimonial.nombre
+        p= testimonial.correo
+        p= testimonial.mensaje
+
+
+
+    .container 
+        h2 Agrega un Testimonial
+        if(errores)
+            each error in errores 
+                .alert.alert-danger= error.mensaje
+
+        form(action="/testimoniales", method="POST")
+            div 
+                label(for="nombre") Nombre
+                input(type="text", id="nombre", placeholder="nombre", name="nombre", value=nombre)
+            div 
+                label(for="correo") Correo
+                input(type="text", id="correo", placeholder="@email.com", name="correo", value=correo)
+            div 
+                label(for="mensaje") Mensaje
+                textarea#mensaje(name="mensaje", placeholder="Tu mensaje..", rows="3")=mensaje
+            input(type="submit", class="btn primary-btn")
+            

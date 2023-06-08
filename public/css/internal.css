@@ -1,0 +1,12 @@
+.hero .container{
+    min-height: 550px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero .hero-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: calc(40% - 40px);
+}

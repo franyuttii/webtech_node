@@ -1,0 +1,15 @@
+extends ./layout/index
+
+block contenido 
+    h1(style="color: red") #{pagina}
+    main.container.mt-5
+        .row.proximosViajes.flex
+            each portafolio in portafolios
+                a(href=`/portafolio/${portafolio.slug}`) 
+                    img(src=`/img/portafolio/${portafolio.imagen}.png`, alt="", class="img-fluid")
+                    h2= portafolio.titulo
+                    h3= portafolio.categoria
+                    p Fecha de subida: #{portafolio.fecha_creacion}
+                    p Cliente: #{portafolio.cliente}
+                    p Fecha de Lanzamiento: #{portafolio.fecha_lanzamiento}
+                    p #{portafolio.descripcion}
