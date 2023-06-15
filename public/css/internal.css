@@ -1,12 +1,108 @@
-.hero .container{
-    min-height: 550px;
-    align-items: center;
-    justify-content: space-between;
+.hero .container {
+  min-height: 550px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero .hero-text {
+  width: calc(70% - 40px);
 }
 
 .hero .hero-button {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: calc(30% - 40px);
+}
+
+@media (max-width: 743px) {
+  .hero .container {
+    justify-content: center;
+    text-align: center;
     align-items: center;
-    width: calc(40% - 40px);
+    align-content: center;
+  }
+
+  .hero .hero-button {
+    justify-content: center;
+  }
+}
+
+/* Tweaks */
+.contenedor-servicios {
+  margin-top: 0;
+}
+
+.contenedor-servicios {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media(max-width: 1024px) {
+    .contenedor-servicios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 743px) {
+    .contenedor-servicios {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Pricing */
+
+.pricing-table ul {
+  /* list-style: none; */
+  margin-top: 20px;
+  list-style: none;
+  margin-bottom: 40px;
+}
+
+.pricing-table ul li {
+  font-size: var(--body-font-size);
+  color: var(--text-color);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Service Feautures */
+.feautures {
+    padding: 0;
+    margin-bottom: 100px;
+}
+
+.feautures-container  {
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media(max-width: 1024px) {
+    .feautures-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 743px) {
+    .feautures-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* FAQ */
+.faq {
+    margin-bottom: 100px;
+}
+
+/* Contact Card */
+.contact-card {
+  padding: 50px 70px;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom:100px; 
+  margin-top: -50px;
+  position: relative;
+  background-color: var(--white-color);
 }

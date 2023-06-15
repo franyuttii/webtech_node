@@ -1,13 +1,10 @@
 import { Portafolio } from "../models/Portafolio.js";
-import {Testimonial} from "../models/Testimoniales.js"
+import { Testimonial } from "../models/Testimoniales.js";
 
 const paginaIncio = async (req, res) => {
-
-  const promiseDB = []; 
-  promiseDB.push(Portafolio.findAll({limit: 3}));
-  promiseDB.push(Testimonial.findAll({limit: 3}));
-
-
+  const promiseDB = [];
+  promiseDB.push(Portafolio.findAll({ limit: 3 }));
+  promiseDB.push(Testimonial.findAll({ limit: 3 }));
 
   try {
     const resultado = await Promise.all(promiseDB);
@@ -36,12 +33,18 @@ const paginaServicios = (req, res) => {
 };
 
 const paginaServicioMantenimiento = (req, res) => {
-  res.render("servicioMantenimiento"),
-    {
-      pagina: "Mantenimiento Wordpress",
-      css: "/css/internal.css",
-    };
+  res.render("servicioMantenimiento", {
+    pagina: "Mantenimiento Web",
+    css: "/css/internal.css",
+  });
 };
+
+const paginaServicioHosting = (req, res) => {
+  res.render("servicioHosting", {
+    pagina: "Hosting Web", 
+    css: "/css/internal.css",
+  })
+}
 
 const paginaPortafolio = async (req, res) => {
   try {
@@ -77,14 +80,13 @@ const paginaTestimoniales = async (req, res) => {
     const testimoniales = await Testimonial.findAll();
 
     res.render("testimoniales", {
-      pagina: "Testimoniales", 
-      testimoniales
-    })
+      pagina: "Testimoniales",
+      testimoniales,
+    });
   } catch (error) {
     console.log(error);
   }
-
-}
+};
 
 const paginaContacto = (req, res) => {
   res.render("contacto", {
@@ -102,4 +104,5 @@ export {
   paginaDetallePortafolio,
   paginaServicioMantenimiento,
   paginaTestimoniales,
+  paginaServicioHosting, 
 };

@@ -9,10 +9,18 @@ block contenido
                     span.gradient web
                 p Brindamos un servicio completo de diseño y desarrollo web profesional, tiendas online y posicionamiento SEO en Veracruz, México.
                 .flex.gap-16
-                    a.btn.primary-btn(href="#") Contáctanos
-                    a.btn.secondary-btn Ver Portafolio 
+                    a.btn.primary-btn(href="/contacto") Contáctanos
+                    a.btn.secondary-btn(href="/portafolio") Ver Más 
             .hero-img
-                img(src="/img/capitol-mockup.png", alt="", class="img-fluid")
+                .swiper.mySwiper
+                    .swiper-wrapper
+                        .swiper-slide
+                            img(src="/img/capitol-mockup.png", alt="", class="img-fluid")
+                        .swiper-slide
+                            img(src="/img/mobile-mockup.png", alt="", class="img-fluid")
+                        .swiper-slide
+                            img(src="/img/capitol-mockup.png", alt="", class="img-fluid")
+                    .swiper-pagination
             .shadow 
     
     section.servicios 
@@ -127,12 +135,13 @@ block contenido
         .cta-image
             img(src="/img/banner.jpg", alt="", class="img-fluid") 
         .cta-body 
-            h2 
-                | ¡Hagamos algo increíble 
-                span.gradient juntos!
-            a(href="/contacto", class="cta-button")
-                svg(width='29' height='29' viewbox='0 0 29 29' fill='none' xmlns='http://www.w3.org/2000/svg')
-                    path(d='M7.19355 22.3676C6.86812 22.0027 6.841 21.43 7.11219 21.0304L7.19355 20.9261L20.0499 6.51055C20.4049 6.11248 20.9805 6.11248 21.3355 6.51055C21.6609 6.87545 21.6881 7.44818 21.4169 7.84772L21.3355 7.9521L8.47918 22.3676C8.12416 22.7657 7.54857 22.7657 7.19355 22.3676Z' fill='white' stroke='white')
-                    path(d='M10.346 8.27514C9.84391 8.27635 9.43602 7.82097 9.43494 7.25801C9.43396 6.74623 9.76952 6.32173 10.2077 6.24786L10.3421 6.23649L20.6906 6.2115C21.1483 6.21039 21.5276 6.58881 21.592 7.08185L21.6016 7.23294L21.5802 18.8374C21.5791 19.4004 21.1713 19.8558 20.6692 19.8546C20.2128 19.8536 19.8356 19.4755 19.7716 18.9838L19.762 18.8332L19.781 8.25231L10.346 8.27514Z' fill='white' stroke='white')
-                |Contactanos
+            .container 
+                h2 
+                    | ¡Hagamos algo increíble 
+                    span.gradient juntos!
+                a(href="/contacto", class="cta-button")
+                    svg(width='29' height='29' viewbox='0 0 29 29' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        path(d='M7.19355 22.3676C6.86812 22.0027 6.841 21.43 7.11219 21.0304L7.19355 20.9261L20.0499 6.51055C20.4049 6.11248 20.9805 6.11248 21.3355 6.51055C21.6609 6.87545 21.6881 7.44818 21.4169 7.84772L21.3355 7.9521L8.47918 22.3676C8.12416 22.7657 7.54857 22.7657 7.19355 22.3676Z' fill='white' stroke='white')
+                        path(d='M10.346 8.27514C9.84391 8.27635 9.43602 7.82097 9.43494 7.25801C9.43396 6.74623 9.76952 6.32173 10.2077 6.24786L10.3421 6.23649L20.6906 6.2115C21.1483 6.21039 21.5276 6.58881 21.592 7.08185L21.6016 7.23294L21.5802 18.8374C21.5791 19.4004 21.1713 19.8558 20.6692 19.8546C20.2128 19.8536 19.8356 19.4755 19.7716 18.9838L19.762 18.8332L19.781 8.25231L10.346 8.27514Z' fill='white' stroke='white')
+                    |Contactanos
 

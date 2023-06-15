@@ -9,7 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const add_class_on_scroll = () => header.classList.add("scroll");
   const remove_class_on_scroll = () => header.classList.remove("scroll");
 
+  checkHeaderPosition();
+
   window.addEventListener("scroll", function () {
+    checkHeaderPosition();
+  });
+
+  function checkHeaderPosition() {
     scrollpos = window.scrollY;
     if (scrollpos >= header_height) {
       add_class_on_scroll();
@@ -18,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
       remove_class_on_scroll();
       headerLogo.src = "/img/white-logo.svg";
     }
-  });
+  }
 
   //Opens MegaMenu when user clicks to menu 
   const menuButton = document.querySelector('#menu');
@@ -51,5 +57,18 @@ document.addEventListener("DOMContentLoaded", function () {
   //   origin: 'bottom',
   //   opacity: null
   // });
+
+
+  //Slider 
+  var swiper = new Swiper(".mySwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    loop: true,
+    autoplay: {
+      delay: 4000,
+    },
+  });
 
 });
