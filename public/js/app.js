@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-
   //Add/Remove Class in header on user scroll
   let scrollpos = window.scrollY;
   const header = document.querySelector(".header");
@@ -26,40 +25,28 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  //Opens MegaMenu when user clicks to menu 
-  const menuButton = document.querySelector('#menu');
-  const menuText = document.querySelector('#menu span');
-  const megaMenu = document.querySelector('.megamenu'); 
-  const body = document.querySelector('body');
+  //Opens MegaMenu when user clicks to menu
+  const menuButton = document.querySelector("#menu");
+  const menuText = document.querySelector("#menu span");
+  const megaMenu = document.querySelector(".megamenu");
+  const body = document.querySelector("body");
 
   menuButton.addEventListener("click", (e) => {
     e.preventDefault();
-    if(megaMenu.classList.contains("hidden")) {
-      megaMenu.classList.remove('hidden');
+    if (megaMenu.classList.contains("hidden")) {
+      megaMenu.classList.remove("hidden");
       body.style.overflowY = "hidden";
       add_class_on_scroll();
       headerLogo.src = "/img/dark-logo.svg";
-      menuText.textContent = 'Cerrar';
+      menuText.textContent = "Cerrar";
     } else {
-      megaMenu.classList.add('hidden');
-      menuText.textContent = 'Menú';
+      megaMenu.classList.add("hidden");
+      menuText.textContent = "Menú";
       body.style.overflowY = "auto";
     }
-  
-  })
+  });
 
-  // // Scroll Reveal 
-  // ScrollReveal().reveal('h1, h2, .clientes-logo .logo', {
-  //   reset: true,
-  //   distance: '100%',
-  //   delay: 375,
-  //   duration: 1000,
-  //   origin: 'bottom',
-  //   opacity: null
-  // });
-
-
-  //Slider 
+  //Slider
   var swiper = new Swiper(".mySwiper", {
     pagination: {
       el: ".swiper-pagination",
@@ -70,5 +57,25 @@ document.addEventListener("DOMContentLoaded", function () {
       delay: 4000,
     },
   });
+  $('.mySwiper2').slick({
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    loop: true,
+    autoplay: {
+      delay: 4000,
+    },
+  });
+
+  // // Scroll Reveal
+  // ScrollReveal().reveal('h1, h2, .clientes-logo .logo', {
+  //   reset: true,
+  //   distance: '100%',
+  //   delay: 375,
+  //   duration: 1000,
+  //   origin: 'bottom',
+  //   opacity: null
+  // });
 
 });

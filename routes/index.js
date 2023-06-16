@@ -8,7 +8,9 @@ import {
   paginaDetallePortafolio,
   paginaServicioMantenimiento,
   paginaTestimoniales,
-  paginaServicioHosting
+  paginaServicioHosting, 
+  paginaPoliticasDePrivacidad,
+  paginaTerminosCondiciones
 } from "../controllers/paginasController.js";
 import { 
   guardarTestimonial 
@@ -33,5 +35,9 @@ router.post("/testimoniales", guardarTestimonial);
 
 router.get("/contacto", paginaContacto);
 router.post("/contacto", enviarFormulario);
+
+
+router.get("/politicas-de-privacidad", paginaPoliticasDePrivacidad);
+router.get("/terminos-y-condiciones", paginaTerminosCondiciones);
 
 export default router;

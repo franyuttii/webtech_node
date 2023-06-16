@@ -1,4 +1,114 @@
 extends ./layout/index
 
 block contenido
-    include ./components/page-hero
+    main.hero 
+        .container 
+            .hero-text 
+                h1
+                    | Damos valor y  
+                    span.gradient soluciones 
+                    | no solo diseño
+            a(class="hero-button", href="#tecnologias")
+                svg(width='104' height='104' viewbox='0 0 104 104' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    g(clip-path='url(#clip0_278_484)')
+                        path(d='M50.9997 45V56.17L46.1197 51.29C45.7297 50.9 45.0897 50.9 44.6997 51.29C44.3097 51.68 44.3097 52.31 44.6997 52.7L51.2897 59.29C51.6797 59.68 52.3097 59.68 52.6997 59.29L59.2897 52.7C59.6797 52.31 59.6797 51.68 59.2897 51.29C58.8997 50.9 58.2697 50.9 57.8797 51.29L52.9997 56.17V45C52.9997 44.45 52.5497 44 51.9997 44C51.4497 44 50.9997 44.45 50.9997 45Z' fill='#B8B8B8')
+                    rect(x='0.5' y='0.5' width='103' height='103' rx='51.5' stroke='#B8B8B8')
+                defs
+                    clippath#clip0_278_484
+                    rect(width='24' height='24' fill='white' transform='translate(40 40)')
+    
+    section.tecnologias#tecnologias
+        .container 
+            h2 
+                |Las mejores 
+                span.gradient Tecnologías
+            p Implementamos solamente las mejores y las más estables tecnologías en cada uno de nuestros desarrollos.
+            .contenedor-tecnologias
+                img(src="/img/nosotros/nodejs.png", alt="Node.Js")
+                img(src="/img/nosotros/javascript.png", alt="Javascript")
+                img(src="/img/nosotros/mongodb.png", alt="Mongo DB")
+                img(src="/img/nosotros/react.png", alt="React")
+                img(src="/img/nosotros/laravel.png", alt="Laravel")
+                img(src="/img/nosotros/bootstrap.png", alt="Bootstrap")
+                img(src="/img/nosotros/tailwind.png", alt="Tailwind")
+                img(src="/img/nosotros/git.png", alt="Git")
+
+    section.nosotros 
+        .container 
+            .about-img
+                img(src="/img/about.jpg", alt="Agencia de desarrollo web en Veracruz" class="img-fluid")
+            .about-text
+                h2 
+                    |Conoce más sobre 
+                    span.gradient Nosotros
+                p Somos una agencia de servicios digitales enfocada en el desarrollo Web. Nos encargamos de diseñar y desarrollar plataformas web completamente a medida de tus necesidades. Si has decido dar el salto a internet o si ya lo hiciste pero quieres mejorar lo que tienes, no busques más, nosotros podemos ayudarte.
+                .flex.space-between
+                    .number 
+                        h3 80+ 
+                        p Proyectos
+                    .number 
+                        h3 45+ 
+                        p Clientes Felices
+                    .number 
+                        h3 4+ 
+                        p Años de experiencia
+    
+    section.filosofia 
+        .container 
+            .heading 
+                h2 
+                    |Nuestra 
+                    span.gradient Filosofía
+                p Implementamos solamente las mejores y las más estables tecnologías en cada uno de nuestros desarrollos.
+            .img
+                img(src="/img/nosotros/mexico.jpg", class="img-fluid") 
+            .text 
+                .mision 
+                    h3 Misión - Superar expectativas
+                    p Proporcionar soluciones de desarrollo web de vanguardia, con un enfoque en satisfacer las necesidades específicas de nuestros clientes en todo México, E.U.A. y Canada. Nos comprometemos a ofrecer resultados excepcionales, creando sitios web personalizados y funcionales que impulsen el éxito de sus negocios en línea. Trabajamos en estrecha colaboración con nuestros clientes para comprender sus metas y objetivos, y utilizamos nuestro conocimiento y experiencia en tecnologías web para ofrecer soluciones innovadoras y efectivas. Nos esforzamos por superar las expectativas y proporcionar un servicio y atención al cliente de primera categoría en todo momento.
+                .vision 
+                    h3 Visión - crecer de la mano con nuestros clientes
+                    p Nuestra visión es convertirnos en la agencia líder de desarrollo web en México, comenzando por Veracruz. Nos esforzamos por brindar a nuestros clientes un servicio y atención excepcionales. Con enfoque en la innovación y utilizando las últimas tecnologías, creamos sitios web personalizados y funcionales que reflejen la identidad y objetivos comerciales de cada cliente. Nuestro equipo altamente capacitado y experimentado se asegura de entregar resultados de alta calidad.
+
+    section.feautures 
+        .container 
+                h2 
+                    |¿Por qué 
+                    span.gradient Nosotros?
+                .feautures-container 
+                    .feauture-card
+                        img(src="img/diseno-unico.svg", alt="")
+                        h4 Diseño Unico
+                        p Diseñamos desde cero y de la mano con nuestros clientes su sitio web para que este pueda reflejar lo que se quiere comunicar a los usuarios.
+                    .feauture-card
+                        img(src="img/servicio-360.svg", alt="")
+                        h4 Servicio 360º
+                        p Ofrecemos todos los servicios necesario para entregar un sitio web de calidad y optimizado para su velocidad y posicionamiento SEO.
+                    .feauture-card
+                        img(src="img/clientes.svg", alt="")
+                        h4 Clientes Satisfechos
+                        p Para nosotros lo más importante es el éxito de tu proyecto, esto nos ha permitido llegar a más de 60 clientes en México, Canada y Estados Unidos.
+
+
+    section.equipo#equipo
+        .container 
+            h2 
+                |Nuestro 
+                span.gradient Equipo
+            .contenedor-equipo 
+                .team-member 
+                    img(src="/img/nosotros/max.png", alt="", class="img-fluid")
+                    h4 Maximiliano Orozco Franyutti
+                    h5 C.E.O. & Founder
+                .team-member 
+                    img(src="/img/nosotros/jhon.png", alt="", class="img-fluid")
+                    h4 Jhon Azcarate Cabrera
+                    h5 Front-End Developer
+                .team-member 
+                    img(src="/img/nosotros/pablo.png", alt="", class="img-fluid")
+                    h4 Pablo Bozzolo 
+                    h5 Back-End Developer
+                .team-member 
+                    img(src="/img/nosotros/isma.png", alt="", class="img-fluid")
+                    h4 Ismael Tenorio 
+                    h5 Graphic Design

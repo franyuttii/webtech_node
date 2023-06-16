@@ -1,15 +1,29 @@
 extends ./layout/index
 
 block contenido 
-    h1(style="color: red") #{pagina}
-    main.container.mt-5
-        .row.proximosViajes.flex
+    main.hero 
+        .container 
+            .hero-text 
+                h1
+                    |Conoce nuestro 
+                    span.gradient Portafolio
+            a(class="hero-button", href="#portfolio-archive")
+                svg(width='104' height='104' viewbox='0 0 104 104' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    g(clip-path='url(#clip0_278_484)')
+                        path(d='M50.9997 45V56.17L46.1197 51.29C45.7297 50.9 45.0897 50.9 44.6997 51.29C44.3097 51.68 44.3097 52.31 44.6997 52.7L51.2897 59.29C51.6797 59.68 52.3097 59.68 52.6997 59.29L59.2897 52.7C59.6797 52.31 59.6797 51.68 59.2897 51.29C58.8997 50.9 58.2697 50.9 57.8797 51.29L52.9997 56.17V45C52.9997 44.45 52.5497 44 51.9997 44C51.4497 44 50.9997 44.45 50.9997 45Z' fill='#B8B8B8')
+                    rect(x='0.5' y='0.5' width='103' height='103' rx='51.5' stroke='#B8B8B8')
+                defs
+                    clippath#clip0_278_484
+                    rect(width='24' height='24' fill='white' transform='translate(40 40)')
+
+            .shadow 
+    
+    
+    
+    section.portfolio-archive#portfolio-archive
+        .container
             each portafolio in portafolios
-                a(href=`/portafolio/${portafolio.slug}`) 
-                    img(src=`/img/portafolio/${portafolio.imagen}.png`, alt="", class="img-fluid")
+                a(href=`/portafolio/${portafolio.slug}`, class='portafolio-card')
+                    img(src=`/img/portafolio/${portafolio.imagen_destacada}.jpg`, alt="", class="img-fluid")
                     h2= portafolio.titulo
                     h3= portafolio.categoria
-                    p Fecha de subida: #{portafolio.fecha_creacion}
-                    p Cliente: #{portafolio.cliente}
-                    p Fecha de Lanzamiento: #{portafolio.fecha_lanzamiento}
-                    p #{portafolio.descripcion}

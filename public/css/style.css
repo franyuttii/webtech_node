@@ -136,6 +136,9 @@ h2 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+  background-size: 100%;
+  background-position: center center;
+  animation: gradientAnimation 5s infinite;
 }
 
 h3 {
@@ -169,6 +172,12 @@ input, textarea {
   display: flex;
   gap: 32px;
   margin-bottom: 32px;
+}
+
+@media(max-width: 743px) {
+  .form-group {
+    flex-direction: column;
+  }
 }
 
 .btn {
@@ -867,6 +876,7 @@ input, textarea {
   gap: var(--normal-gap);
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 @media (max-width: 1024px) {
@@ -1137,6 +1147,7 @@ input, textarea {
 
   .footer .col {
     margin-bottom: 32px;
+    width: 100%;
   }
 
   .footer .col:last-child {
@@ -1159,5 +1170,21 @@ input, textarea {
 @media(max-width: 743px) {
   .swiper-slide {
     margin-bottom: 32px;
+  }
+}
+
+
+@keyframes gradientAnimation {
+  0% {
+    background-size: 200%;
+    background-position: top center;
+  }
+  50% {
+    background-size: 100%;
+    background-position: left center;
+  }
+  100% {
+    background-size: 200%;
+    background-position: top center;
   }
 }

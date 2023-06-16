@@ -7,7 +7,7 @@ dotenv.config();
 const enviarFormulario = async (req, res) => {
   const { nombre, email, celular, estado, mensaje } = req.body;
   try {
-    await mainMail(nombre, email, celular, mensaje);
+    await mainMail(nombre, email, celular, estado, mensaje);
     console.log("Message Successfully Sent!");
     res.redirect("/contacto")
   } catch (error) {

@@ -95,6 +95,21 @@ const paginaContacto = (req, res) => {
   });
 };
 
+
+const paginaPoliticasDePrivacidad = (req, res) => {
+  res.render("politicasPrivacidad", {
+    pagina: "Políticas de Privacidad",
+    css: "/css/internal.css",
+  });
+}
+
+const paginaTerminosCondiciones = (req, res) => {
+  res.render("terminosCondiciones", {
+    pagina: "Términos y Condiciones",
+    css: "/css/internal.css",
+  });
+}
+
 export {
   paginaIncio,
   paginaNosotros,
@@ -105,4 +120,6 @@ export {
   paginaServicioMantenimiento,
   paginaTestimoniales,
   paginaServicioHosting, 
+  paginaPoliticasDePrivacidad,
+  paginaTerminosCondiciones
 };
