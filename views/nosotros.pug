@@ -19,10 +19,11 @@ block contenido
     
     section.tecnologias#tecnologias
         .container 
-            h2 
-                |Las mejores 
-                span.gradient Tecnologías
-            p Implementamos solamente las mejores y las más estables tecnologías en cada uno de nuestros desarrollos.
+            .heading 
+                h2 
+                    |Las mejores 
+                    span.gradient Tecnologías
+                p Implementamos solamente las mejores y las más estables tecnologías en cada uno de nuestros desarrollos.
             .contenedor-tecnologias
                 img(src="/img/nosotros/nodejs.png", alt="Node.Js")
                 img(src="/img/nosotros/javascript.png", alt="Javascript")
@@ -42,7 +43,7 @@ block contenido
                     |Conoce más sobre 
                     span.gradient Nosotros
                 p Somos una agencia de servicios digitales enfocada en el desarrollo Web. Nos encargamos de diseñar y desarrollar plataformas web completamente a medida de tus necesidades. Si has decido dar el salto a internet o si ya lo hiciste pero quieres mejorar lo que tienes, no busques más, nosotros podemos ayudarte.
-                .flex.space-between
+                .numbers-container
                     .number 
                         h3 80+ 
                         p Proyectos
@@ -76,20 +77,39 @@ block contenido
                     |¿Por qué 
                     span.gradient Nosotros?
                 .feautures-container 
-                    .feauture-card
-                        img(src="img/diseno-unico.svg", alt="")
-                        h4 Diseño Unico
-                        p Diseñamos desde cero y de la mano con nuestros clientes su sitio web para que este pueda reflejar lo que se quiere comunicar a los usuarios.
-                    .feauture-card
-                        img(src="img/servicio-360.svg", alt="")
-                        h4 Servicio 360º
-                        p Ofrecemos todos los servicios necesario para entregar un sitio web de calidad y optimizado para su velocidad y posicionamiento SEO.
-                    .feauture-card
-                        img(src="img/clientes.svg", alt="")
-                        h4 Clientes Satisfechos
-                        p Para nosotros lo más importante es el éxito de tu proyecto, esto nos ha permitido llegar a más de 60 clientes en México, Canada y Estados Unidos.
-
-
+                    .swiper.mySwiper2
+                        .swiper-wrapper
+                            .swiper-slide
+                              .feauture-card
+                                img(src="img/diseno-unico.svg", alt="")
+                                h4 Diseño Unico
+                                p Diseñamos desde cero y de la mano con nuestros clientes su sitio web para que este pueda reflejar lo que se quiere comunicar a los usuarios.
+                            .swiper-slide
+                                .feauture-card
+                                    img(src="img/servicio-360.svg", alt="")
+                                    h4 Servicio 360º
+                                    p Ofrecemos todos los servicios necesario para entregar un sitio web de calidad y optimizado para su velocidad y posicionamiento SEO.
+                            .swiper-slide
+                                .feauture-card
+                                    img(src="img/clientes.svg", alt="")
+                                    h4 Clientes Satisfechos
+                                    p Para nosotros lo más importante es el éxito de tu proyecto, esto nos ha permitido llegar a más de 60 clientes en México, Canada y Estados Unidos.
+                            .swiper-slide
+                              .feauture-card
+                                img(src="img/diseno-unico.svg", alt="")
+                                h4 Diseño Unico
+                                p Diseñamos desde cero y de la mano con nuestros clientes su sitio web para que este pueda reflejar lo que se quiere comunicar a los usuarios.
+                            .swiper-slide
+                                .feauture-card
+                                    img(src="img/servicio-360.svg", alt="")
+                                    h4 Servicio 360º
+                                    p Ofrecemos todos los servicios necesario para entregar un sitio web de calidad y optimizado para su velocidad y posicionamiento SEO.
+                            .swiper-slide
+                                .feauture-card
+                                    img(src="img/clientes.svg", alt="")
+                                    h4 Clientes Satisfechos
+                                    p Para nosotros lo más importante es el éxito de tu proyecto, esto nos ha permitido llegar a más de 60 clientes en México, Canada y Estados Unidos.
+                        .swiper-pagination
     section.equipo#equipo
         .container 
             h2 

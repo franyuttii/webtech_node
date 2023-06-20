@@ -1,17 +1,62 @@
 import nodemailer from "nodemailer";
 import dotenv from "dotenv";
+import { Mensaje } from "../models/Mensaje.js";
 
 const nodeMail = nodemailer;
 dotenv.config();
 
 const enviarFormulario = async (req, res) => {
+  //Validar
   const { nombre, email, celular, estado, mensaje } = req.body;
-  try {
-    await mainMail(nombre, email, celular, estado, mensaje);
-    console.log("Message Successfully Sent!");
-    res.redirect("/contacto")
-  } catch (error) {
-    console.log(error);
+  const errores = [];
+
+  if(nombre.trim() === '') {
+    errores.push({mensaje: 'El nombre esta vacio'});
+  }
+
+  if(email.trim() === '' || !validateEmail(email)) {
+    errores.push({mensaje: 'El email no es valido'});
+  }
+
+  if(celular.trim() === '') {
+    errores.push({mensaje: 'El celular esta vacio'});
+  }
+
+  function validateEmail(email) {
+    var emailFormat = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+    if (email !== '' && email.match(emailFormat)) { return true; }
+    
+    return false;
+}
+
+  if(errores.length > 0) {
+    //Mostrar la vista con errores 
+    res.render('contacto', {
+      pagina: 'Contacto', 
+      css: "/css/internal.css",
+      errores, 
+      nombre, 
+      email,
+      celular, 
+      estado, 
+      mensaje
+    })
+    return;
+  } else {
+    //Enviar mensaje por correo y almacenarlo en la base de datos
+    try {
+      await Mensaje.create({
+        nombre, 
+        email,
+        celular, 
+        estado,
+        mensaje
+      });
+      await mainMail(nombre, email, celular, estado, mensaje);
+      res.redirect('/contacto');
+    } catch (error) {
+      console.log(error);
+    }
   }
 };
 

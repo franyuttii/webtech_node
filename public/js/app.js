@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  //Slider
+  //Home Slider
   var swiper = new Swiper(".mySwiper", {
     pagination: {
       el: ".swiper-pagination",
@@ -57,14 +57,36 @@ document.addEventListener("DOMContentLoaded", function () {
       delay: 4000,
     },
   });
-  $('.mySwiper2').slick({
+
+  //About Us Slider
+  var swiper2 = new Swiper(".mySwiper2", {
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
     loop: true,
-    autoplay: {
-      delay: 4000,
+    // autoplay: {
+    //   delay: 4000,
+    // },
+    autoHeight: true,
+    slidesPerView: 3,
+    spaceBetween: 32,
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 32
+      },
+      // when window width is >= 480px
+      744: {
+        slidesPerView: 2,
+        spaceBetween: 32
+      },
+      // when window width is >= 1025px
+      1025: {
+        slidesPerView: 3,
+        spaceBetween: 32
+      }
     },
   });
 

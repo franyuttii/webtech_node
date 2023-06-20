@@ -15,18 +15,90 @@ block contenido
                 defs
                     clippath#clip0_278_484
                     rect(width='24' height='24' fill='white' transform='translate(40 40)')
-
             .shadow 
 
 
     section.contact-card.container
         h4 ¿Tienes alguna duda, queja o sugerencia?
+        if(errores)
+            each error in errores 
+                .alert.alert-danger= error.mensaje
         form(action="/contacto" method="POST", id="contactForm")
             .form-group 
-                input(type="text", placeholder="Nombre", id="nombre", name="nombre")
-                input(type="text", placeholder="@email.com", id="email", name="email")
+                div 
+                    label(for="nombre")
+                        |Nombre 
+                        span.required * 
+                    input(type="text", placeholder="Nombre", id="nombre", name="nombre", value=nombre, required)
+                div 
+                    label(for="email")
+                        |E-mail 
+                        span.required * 
+                    input(type="text", placeholder="@email.com", id="email", name="email", value=email, required)
             .form-group 
-                input(type="tel", placeholder="Celular", id="celular", name="celular")
-                input(type="text", placeholder="Estado", id="estado", name="estado")
-            textarea#mensaje(name="mensaje", cols="30", rows="10") 
+                div 
+                    label(for="celular") 
+                        |Celular 
+                        span.required * 
+                    input(type="tel", placeholder="Celular", id="celular", name="celular", value=celular, required)
+                div 
+                    label(for="estado")
+                        |Estado 
+                        span.required * 
+                    select#estado(name="estado") 
+                        option(value="ags") Aguascalientes
+                        option(value="bcn") Baja California	
+                        option(value="bcs") Baja California Sur
+                        option(value="cam") Campeche
+                        option(value="chp") Chiapas
+                        option(value="chi") Chihuahua
+                        option(value="cdmx") Ciudad de México
+                        option(value="coa") Coahuila
+                        option(value="col") Colima
+                        option(value="dur") Durango
+                        option(value="gto") Guanajuato
+                        option(value="gro") Guerrero
+                        option(value="hgo") Hidalgo
+                        option(value="jal") Jalisco
+                        option(value="mex") México
+                        option(value="mic") Michoacán
+                        option(value="mor") Morelos
+                        option(value="nay") Nayarit
+                        option(value="nle") Nuevo León
+                        option(value="oax") Oaxaca
+                        option(value="pue") Puebla
+                        option(value="qro") Querétaro
+                        option(value="roo") Quintana Roo
+                        option(value="slp") San Luis Potosí
+                        option(value="sin") Sinaloa
+                        option(value="son") Sonora
+                        option(value="tab") Tabasco
+                        option(value="tam") Tamaulipas
+                        option(value="tlx") Tlaxcala
+                        option(value="ver") Veracruz
+                        option(value="yuc") Yucatán
+                        option(value="zac") Zacatecas
+            label(for="mensaje") Mensaje
+            textarea#mensaje(name="mensaje", cols="30", rows="10", placeholder="Tu mensaje...")=mensaje
+            p Al enviar este formulario, aceptas nuestra 
+                a(href="/politicas-de-privacidad") Política de Privacidad
+                |, que explica cómo podemos recopilar y usar la información proporcionada.
             button(type="submit", class="btn primary-btn") Enviar
+
+    section.contact-info 
+        .container 
+            h2 Contáctanos
+            .row 
+                .col 
+                    h4 Instagram
+                    a(href="") @WebTechMx
+                .col 
+                    h4 LinkedIn
+                    a(href="") WebTechMx
+                .col
+                    h4 Email 
+                    a(href="") hola@webtech.mx
+                .col 
+                    h4 Celular
+                    a(href="") +52-229-520-1849
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120588.04624928557!2d-96.24635660549905!3d19.17875351676717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c3414245ca78c5%3A0x18a4d642e936019b!2sVeracruz%2C%20Ver.!5e0!3m2!1ses-419!2smx!4v1687033227051!5m2!1ses-419!2smx" width="100%" height="400" style="border:0; border-radius: 4px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
