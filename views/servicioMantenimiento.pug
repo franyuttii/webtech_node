@@ -19,8 +19,8 @@ block contenido
             .shadow 
     section.servicios#pricing
             .container 
-                .contenedor-servicios
-                    .pricing-table 
+                .contenedor-servicios#pricing
+                    .pricing-table
                         img(src="/img/mantenimiento/starter.svg", alt="")
                         h3 Starter 
                         p Lo esencial para que tu sitio este seguro y funcione correctamente.
@@ -84,37 +84,103 @@ block contenido
                                 |Subida de hasta 2 blogs al mes. 
                         a(href="#", class="btn secondary-btn") Contratar
 
-    section.feautures 
+    section.service_feautures 
         .container 
                 h2 
-                    |¿Por qué somos tu mejor 
-                    span.gradient Opción?
+                    |¿Porqué contratar nuestro 
+                    span.gradient Mantenimiento?
                 .feautures-container 
-                    .feauture
-                        img(src="/img/mantenimiento/staging.svg", alt="")
-                        h4 Staging / Sitios de prueba
+                    .service-feauture
+                        img(src="/img/mantenimiento/staging.svg", alt="Sitios de prueba")
+                        h4 Actualizaciones
                         p Crea una copia al instante de tu sitio, realizá todos los cambios que necesites y publícalos en sólo un clic.
-                    .feauture
-                        img(src="/img/mantenimiento/rendimiento.svg", alt="")
-                        h4 Poder, desempeño y rendimiento
+                    .service-feauture
+                        img(src="/img/mantenimiento/rendimiento.svg", alt="Rendimiento")
+                        h4 Seguridad
                         p Una de las infraestructuras líder en el mercado y con uno de los mejores desempeños en el mundo.
-                    .feauture
-                        img(src="/img/mantenimiento/analytics.svg", alt="")
-                        h4 Herramientas de analytics
+                    .service-feauture
+                        img(src="/img/mantenimiento/analytics.svg", alt="Analytics")
+                        h4 Monitoreo
                         p CDN integrada como ninguna otra, una de las redes de entrega de contenido más extensas y rápidas del mundo.
-                    .feauture
-                        img(src="/img/mantenimiento/ssl.svg", alt="")
-                        h4 Certificados SSL
+                    .service-feauture
+                        img(src="/img/mantenimiento/ssl.svg", alt="Certificado SSL")
+                        h4 Analytics
                         p Podrás instalar certificados de seguridad a tus dominios para encriptar la navegación de tus clientes.
-                    .feauture
-                        img(src="/img/mantenimiento/copias-seguridad.svg", alt="")
-                        h4 Copias de seguridad
+                    .service-feauture
+                        img(src="/img/mantenimiento/copias-seguridad.svg", alt="Copias de seguridad")
+                        h4 Gestión de Contenido
                         p El servidor cuenta con un excelente sistema de copias de seguridad realizando respaldos diarios.
-                    .feauture
-                        img(src="/img/mantenimiento/velocidad.svg", alt="")
-                        h4 Velocidad
+                    .service-feauture
+                        img(src="/img/mantenimiento/velocidad.svg", alt="Velocidad")
+                        h4 Copias de Seguridad 
                         p Utilizamos VPS's para ofrecer una velocidad de carga extremadamente rápida, olvidate de los servidores compartidos.   
     section.faq 
         .container 
             h2 F.A.Q.
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            .faq-accordeon 
+                .question 
+                    h4 ¿Cuáles son los beneficios de contratar nuestros servicios de mantenimiento web WordPress?
+                    svg(width='40' height='40' viewbox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        g(clip-path='url(#clip0_76_3640)')
+                            path(d='M12.3001 35.0168C13.1168 35.8334 14.4335 35.8334 15.2501 35.0168L29.1001 21.1667C29.7501 20.5167 29.7501 19.4667 29.1001 18.8167L15.2501 4.96675C14.4335 4.15008 13.1168 4.15008 12.3001 4.96675C11.4835 5.78341 11.4835 7.10008 12.3001 7.91675L24.3668 20.0001L12.2835 32.0834C11.4835 32.8834 11.4835 34.2168 12.3001 35.0168V35.0168Z' fill='#333333')
+                        defs
+                            clippath#clip0_76_3640
+                                rect(width='40' height='40' fill='white')
+                .answer 
+                    p Al contratar nuestros servicios de mantenimiento web WordPress, puedes beneficiarte de un sitio web seguro, actualizado y optimizado. Nos encargaremos de las actualizaciones de WordPress, temas y plugins, realizaremos copias de seguridad regulares, monitorizaremos la seguridad del sitio, y estaremos disponibles para resolver cualquier problema técnico que pueda surgir.
+            .faq-accordeon 
+                .question 
+                    h4 ¿Qué incluye nuestro servicio de mantenimiento web WordPress?
+                    svg(width='40' height='40' viewbox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        g(clip-path='url(#clip0_76_3640)')
+                            path(d='M12.3001 35.0168C13.1168 35.8334 14.4335 35.8334 15.2501 35.0168L29.1001 21.1667C29.7501 20.5167 29.7501 19.4667 29.1001 18.8167L15.2501 4.96675C14.4335 4.15008 13.1168 4.15008 12.3001 4.96675C11.4835 5.78341 11.4835 7.10008 12.3001 7.91675L24.3668 20.0001L12.2835 32.0834C11.4835 32.8834 11.4835 34.2168 12.3001 35.0168V35.0168Z' fill='#333333')
+                        defs
+                            clippath#clip0_76_3640
+                                rect(width='40' height='40' fill='white')
+                .answer 
+                    p Nuestro servicio de mantenimiento web WordPress incluye actualizaciones regulares de WordPress, temas y plugins, copias de seguridad automatizadas, monitorización de seguridad, optimización de rendimiento, resolución de problemas técnicos y soporte técnico especializado para garantizar que tu sitio web funcione sin problemas.
+            .faq-accordeon 
+                .question 
+                    h4 ¿Por qué es importante mantener actualizado mi sitio web WordPress?
+                    svg(width='40' height='40' viewbox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        g(clip-path='url(#clip0_76_3640)')
+                            path(d='M12.3001 35.0168C13.1168 35.8334 14.4335 35.8334 15.2501 35.0168L29.1001 21.1667C29.7501 20.5167 29.7501 19.4667 29.1001 18.8167L15.2501 4.96675C14.4335 4.15008 13.1168 4.15008 12.3001 4.96675C11.4835 5.78341 11.4835 7.10008 12.3001 7.91675L24.3668 20.0001L12.2835 32.0834C11.4835 32.8834 11.4835 34.2168 12.3001 35.0168V35.0168Z' fill='#333333')
+                        defs
+                            clippath#clip0_76_3640
+                                rect(width='40' height='40' fill='white')
+                .answer 
+                    p Mantener tu sitio web WordPress actualizado es crucial para garantizar la seguridad, el rendimiento y la compatibilidad. Las actualizaciones de WordPress, temas y plugins suelen incluir mejoras de seguridad, corrección de errores y nuevas funciones. Al mantener tu sitio actualizado, reducirás el riesgo de vulnerabilidades y problemas de compatibilidad, manteniendo tu sitio web seguro y optimizado.
+            .faq-accordeon 
+                .question 
+                    h4 ¿Qué medidas de seguridad implementamos en nuestros servicios de mantenimiento web WordPress?
+                    svg(width='40' height='40' viewbox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        g(clip-path='url(#clip0_76_3640)')
+                            path(d='M12.3001 35.0168C13.1168 35.8334 14.4335 35.8334 15.2501 35.0168L29.1001 21.1667C29.7501 20.5167 29.7501 19.4667 29.1001 18.8167L15.2501 4.96675C14.4335 4.15008 13.1168 4.15008 12.3001 4.96675C11.4835 5.78341 11.4835 7.10008 12.3001 7.91675L24.3668 20.0001L12.2835 32.0834C11.4835 32.8834 11.4835 34.2168 12.3001 35.0168V35.0168Z' fill='#333333')
+                        defs
+                            clippath#clip0_76_3640
+                                rect(width='40' height='40' fill='white')
+                .answer 
+                    p Implementamos medidas de seguridad sólidas para proteger tu sitio web WordPress. Esto incluye la configuración de firewalls, la monitorización de posibles amenazas y ataques, la instalación de certificados SSL, la gestión de permisos y accesos, y la detección y eliminación de malware. Nos aseguramos de que tu sitio esté protegido contra posibles vulnerabilidades y riesgos de seguridad.
+            .faq-accordeon 
+                .question 
+                    h4 ¿Cuál es la frecuencia de las copias de seguridad que realizamos en nuestro servicio de mantenimiento web WordPress?
+                    svg(width='40' height='40' viewbox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        g(clip-path='url(#clip0_76_3640)')
+                            path(d='M12.3001 35.0168C13.1168 35.8334 14.4335 35.8334 15.2501 35.0168L29.1001 21.1667C29.7501 20.5167 29.7501 19.4667 29.1001 18.8167L15.2501 4.96675C14.4335 4.15008 13.1168 4.15008 12.3001 4.96675C11.4835 5.78341 11.4835 7.10008 12.3001 7.91675L24.3668 20.0001L12.2835 32.0834C11.4835 32.8834 11.4835 34.2168 12.3001 35.0168V35.0168Z' fill='#333333')
+                        defs
+                            clippath#clip0_76_3640
+                                rect(width='40' height='40' fill='white')
+                .answer 
+                    p Realizamos copias de seguridad automáticas regularmente para garantizar la protección de tus datos. La frecuencia de las copias de seguridad puede variar según tus necesidades y el tipo de contenido de tu sitio web. Sin embargo, generalmente recomendamos realizar copias de seguridad diarias o semanales para asegurar la pérdida mínima de datos en caso de cualquier eventualidad.
+            .faq-accordeon 
+                .question 
+                    h4 ¿Ofrecemos soporte técnico especializado para problemas relacionados con WordPress?
+                    svg(width='40' height='40' viewbox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        g(clip-path='url(#clip0_76_3640)')
+                            path(d='M12.3001 35.0168C13.1168 35.8334 14.4335 35.8334 15.2501 35.0168L29.1001 21.1667C29.7501 20.5167 29.7501 19.4667 29.1001 18.8167L15.2501 4.96675C14.4335 4.15008 13.1168 4.15008 12.3001 4.96675C11.4835 5.78341 11.4835 7.10008 12.3001 7.91675L24.3668 20.0001L12.2835 32.0834C11.4835 32.8834 11.4835 34.2168 12.3001 35.0168V35.0168Z' fill='#333333')
+                        defs
+                            clippath#clip0_76_3640
+                                rect(width='40' height='40' fill='white')
+                .answer 
+                    p Sí, nuestro equipo de soporte técnico especializado en WordPress estará disponible para ayudarte en caso de cualquier problema o consulta. Podemos ayudarte con la resolución de errores, conflictos de plugins, personalización del tema, optimización del rendimiento y cualquier otra necesidad técnica relacionada con WordPress que puedas tener.

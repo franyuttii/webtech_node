@@ -36,15 +36,17 @@ const paginaServicioMantenimiento = (req, res) => {
   res.render("servicioMantenimiento", {
     pagina: "Mantenimiento Web",
     css: "/css/internal.css",
+    faq: true,
   });
 };
 
 const paginaServicioHosting = (req, res) => {
   res.render("servicioHosting", {
-    pagina: "Hosting Web", 
+    pagina: "Hosting Web",
     css: "/css/internal.css",
-  })
-}
+    faq: true,
+  });
+};
 
 const paginaPortafolio = async (req, res) => {
   try {
@@ -63,11 +65,16 @@ const paginaPortafolio = async (req, res) => {
 const paginaDetallePortafolio = async (req, res) => {
   const { slug } = req.params;
 
+  const promiseDB = [];
+  promiseDB.push(Portafolio.findOne({ where: { slug } }));
+  promiseDB.push(Portafolio.findAll({ limit: 3 }));
+
   try {
-    const resultado = await Portafolio.findOne({ where: { slug } });
+    const resultado = await Promise.all(promiseDB);
     res.render("portafolio", {
-      pagina: `Detalles - ${resultado.titulo}`,
-      resultado,
+      pagina: `Detalles - ${resultado[0].titulo}`,
+      resultado: resultado[0],
+      portafolios: resultado[1],
       css: "/css/internal.css",
     });
   } catch (error) {
@@ -95,20 +102,19 @@ const paginaContacto = (req, res) => {
   });
 };
 
-
 const paginaPoliticasDePrivacidad = (req, res) => {
   res.render("politicasPrivacidad", {
     pagina: "Políticas de Privacidad",
     css: "/css/internal.css",
   });
-}
+};
 
 const paginaTerminosCondiciones = (req, res) => {
   res.render("terminosCondiciones", {
     pagina: "Términos y Condiciones",
     css: "/css/internal.css",
   });
-}
+};
 
 export {
   paginaIncio,
@@ -119,7 +125,7 @@ export {
   paginaDetallePortafolio,
   paginaServicioMantenimiento,
   paginaTestimoniales,
-  paginaServicioHosting, 
+  paginaServicioHosting,
   paginaPoliticasDePrivacidad,
-  paginaTerminosCondiciones
+  paginaTerminosCondiciones,
 };

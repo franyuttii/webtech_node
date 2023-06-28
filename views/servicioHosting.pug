@@ -19,7 +19,7 @@ block contenido
             .shadow 
     section.servicios#pricing
             .container 
-                .contenedor-servicios
+                .contenedor-servicios#pricing
                     .pricing-table 
                         img(src="/img/mantenimiento/starter.svg", alt="")
                         h3 Starter 
@@ -46,7 +46,7 @@ block contenido
                         h3 Pro 
                         p Lo esencial que tu sitio web necesita para estar seguro.
                         h2 
-                            |$3,499
+                            |$2,999
                             span.small /año
                         ul 
                             li 
@@ -67,7 +67,7 @@ block contenido
                         h3 Premium 
                         p Todo lo que necesitas para monitorear y hacer crecer tu sitio web.
                         h2 
-                            |$4,999
+                            |$3,999
                             span.small /año
                         ul 
                             li 
@@ -84,37 +84,103 @@ block contenido
                                 |SSL gratuito para todos tus dominios.
                         a(href="#", class="btn secondary-btn") Contratar
 
-    section.feautures 
+    section.service_feautures 
         .container 
                 h2 
                     |¿Porqué usar nuestro 
                     span.gradient Hosting?
                 .feautures-container 
-                    .feauture
-                        img(src="/img/mantenimiento/staging.svg", alt="")
+                    .service-feauture
+                        img(src="/img/mantenimiento/staging.svg", alt="Sitios de prueba")
                         h4 Staging / Sitios de prueba
                         p Crea una copia al instante de tu sitio, realizá todos los cambios que necesites y publícalos en sólo un clic.
-                    .feauture
-                        img(src="/img/mantenimiento/rendimiento.svg", alt="")
+                    .service-feauture
+                        img(src="/img/mantenimiento/rendimiento.svg", alt="Rendimiento")
                         h4 Poder, desempeño y rendimiento
                         p Una de las infraestructuras líder en el mercado y con uno de los mejores desempeños en el mundo.
-                    .feauture
-                        img(src="/img/mantenimiento/analytics.svg", alt="")
+                    .service-feauture
+                        img(src="/img/mantenimiento/analytics.svg", alt="Analytics")
                         h4 Herramientas de analytics
                         p CDN integrada como ninguna otra, una de las redes de entrega de contenido más extensas y rápidas del mundo.
-                    .feauture
-                        img(src="/img/mantenimiento/ssl.svg", alt="")
+                    .service-feauture
+                        img(src="/img/mantenimiento/ssl.svg", alt="Certificado SSL")
                         h4 Certificados SSL
                         p Podrás instalar certificados de seguridad a tus dominios para encriptar la navegación de tus clientes.
-                    .feauture
-                        img(src="/img/mantenimiento/copias-seguridad.svg", alt="")
+                    .service-feauture
+                        img(src="/img/mantenimiento/copias-seguridad.svg", alt="Copias de seguridad")
                         h4 Copias de seguridad
                         p El servidor cuenta con un excelente sistema de copias de seguridad realizando respaldos diarios.
-                    .feauture
-                        img(src="/img/mantenimiento/velocidad.svg", alt="")
+                    .service-feauture
+                        img(src="/img/mantenimiento/velocidad.svg", alt="Velocidad")
                         h4 Velocidad
                         p Utilizamos VPS's para ofrecer una velocidad de carga extremadamente rápida, olvidate de los servidores compartidos.   
     section.faq 
         .container 
             h2 F.A.Q.
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            .faq-accordeon 
+                .question 
+                    h4 ¿Cuáles son las ventajas de elegir nuestro servicio de hosting web?
+                    svg(width='40' height='40' viewbox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        g(clip-path='url(#clip0_76_3640)')
+                            path(d='M12.3001 35.0168C13.1168 35.8334 14.4335 35.8334 15.2501 35.0168L29.1001 21.1667C29.7501 20.5167 29.7501 19.4667 29.1001 18.8167L15.2501 4.96675C14.4335 4.15008 13.1168 4.15008 12.3001 4.96675C11.4835 5.78341 11.4835 7.10008 12.3001 7.91675L24.3668 20.0001L12.2835 32.0834C11.4835 32.8834 11.4835 34.2168 12.3001 35.0168V35.0168Z' fill='#333333')
+                        defs
+                            clippath#clip0_76_3640
+                                rect(width='40' height='40' fill='white')
+                .answer 
+                    p Nuestro servicio de hosting web ofrece una combinación única de características y beneficios. Proporcionamos un rendimiento de servidor rápido y confiable, soporte técnico las 24 horas del día, los 7 días de la semana, seguridad de vanguardia y una interfaz fácil de usar para gestionar tu sitio web.
+            .faq-accordeon 
+                .question 
+                    h4 ¿Cuál es la capacidad de almacenamiento que ofrecemos en nuestros planes de hosting?
+                    svg(width='40' height='40' viewbox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        g(clip-path='url(#clip0_76_3640)')
+                            path(d='M12.3001 35.0168C13.1168 35.8334 14.4335 35.8334 15.2501 35.0168L29.1001 21.1667C29.7501 20.5167 29.7501 19.4667 29.1001 18.8167L15.2501 4.96675C14.4335 4.15008 13.1168 4.15008 12.3001 4.96675C11.4835 5.78341 11.4835 7.10008 12.3001 7.91675L24.3668 20.0001L12.2835 32.0834C11.4835 32.8834 11.4835 34.2168 12.3001 35.0168V35.0168Z' fill='#333333')
+                        defs
+                            clippath#clip0_76_3640
+                                rect(width='40' height='40' fill='white')
+                .answer 
+                    p Ofrecemos una amplia gama de planes de hosting web que se adaptan a tus necesidades específicas. Nuestros planes varían en capacidad de almacenamiento, desde opciones para sitios web más pequeños hasta planes escalables para proyectos más grandes. Podemos ofrecerte el espacio adecuado para almacenar todos tus archivos y datos.
+            .faq-accordeon 
+                .question 
+                    h4 ¿Cómo garantizamos la seguridad de los sitios web alojados en nuestros servidores?
+                    svg(width='40' height='40' viewbox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        g(clip-path='url(#clip0_76_3640)')
+                            path(d='M12.3001 35.0168C13.1168 35.8334 14.4335 35.8334 15.2501 35.0168L29.1001 21.1667C29.7501 20.5167 29.7501 19.4667 29.1001 18.8167L15.2501 4.96675C14.4335 4.15008 13.1168 4.15008 12.3001 4.96675C11.4835 5.78341 11.4835 7.10008 12.3001 7.91675L24.3668 20.0001L12.2835 32.0834C11.4835 32.8834 11.4835 34.2168 12.3001 35.0168V35.0168Z' fill='#333333')
+                        defs
+                            clippath#clip0_76_3640
+                                rect(width='40' height='40' fill='white')
+                .answer 
+                    p La seguridad es una prioridad fundamental para nosotros. Implementamos medidas de seguridad avanzadas, como cortafuegos, monitoreo constante, detección y eliminación de malware, y actualizaciones de seguridad regulares. También ofrecemos certificados SSL gratuitos para proteger la información sensible de tus visitantes.
+            .faq-accordeon 
+                .question 
+                    h4 ¿Qué nivel de soporte técnico ofrecemos a nuestros clientes?
+                    svg(width='40' height='40' viewbox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        g(clip-path='url(#clip0_76_3640)')
+                            path(d='M12.3001 35.0168C13.1168 35.8334 14.4335 35.8334 15.2501 35.0168L29.1001 21.1667C29.7501 20.5167 29.7501 19.4667 29.1001 18.8167L15.2501 4.96675C14.4335 4.15008 13.1168 4.15008 12.3001 4.96675C11.4835 5.78341 11.4835 7.10008 12.3001 7.91675L24.3668 20.0001L12.2835 32.0834C11.4835 32.8834 11.4835 34.2168 12.3001 35.0168V35.0168Z' fill='#333333')
+                        defs
+                            clippath#clip0_76_3640
+                                rect(width='40' height='40' fill='white')
+                .answer 
+                    p Nuestro equipo de soporte técnico altamente capacitado está disponible las 24/7 para brindarte asistencia. Ya sea que necesites ayuda con la configuración inicial, la resolución de problemas técnicos o simplemente tengas preguntas, estamos aquí para ayudarte por chat en vivo, correo electrónico o teléfono.
+            .faq-accordeon 
+                .question 
+                    h4 ¿Cómo podemos ayudarte a migrar tu sitio web desde otro proveedor de hosting?
+                    svg(width='40' height='40' viewbox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        g(clip-path='url(#clip0_76_3640)')
+                            path(d='M12.3001 35.0168C13.1168 35.8334 14.4335 35.8334 15.2501 35.0168L29.1001 21.1667C29.7501 20.5167 29.7501 19.4667 29.1001 18.8167L15.2501 4.96675C14.4335 4.15008 13.1168 4.15008 12.3001 4.96675C11.4835 5.78341 11.4835 7.10008 12.3001 7.91675L24.3668 20.0001L12.2835 32.0834C11.4835 32.8834 11.4835 34.2168 12.3001 35.0168V35.0168Z' fill='#333333')
+                        defs
+                            clippath#clip0_76_3640
+                                rect(width='40' height='40' fill='white')
+                .answer 
+                    p Entendemos que la migración de tu sitio web puede ser complicada. Sin embargo, nuestro equipo de expertos en migración puede facilitar el proceso. Trabajaremos contigo para transferir todos tus archivos, bases de datos y configuraciones sin problemas, minimizando cualquier tiempo de inactividad.
+            .faq-accordeon 
+                .question 
+                    h4 ¿Ofrecemos opciones de escalabilidad para adaptarnos al crecimiento de tu sitio web?
+                    svg(width='40' height='40' viewbox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        g(clip-path='url(#clip0_76_3640)')
+                            path(d='M12.3001 35.0168C13.1168 35.8334 14.4335 35.8334 15.2501 35.0168L29.1001 21.1667C29.7501 20.5167 29.7501 19.4667 29.1001 18.8167L15.2501 4.96675C14.4335 4.15008 13.1168 4.15008 12.3001 4.96675C11.4835 5.78341 11.4835 7.10008 12.3001 7.91675L24.3668 20.0001L12.2835 32.0834C11.4835 32.8834 11.4835 34.2168 12.3001 35.0168V35.0168Z' fill='#333333')
+                        defs
+                            clippath#clip0_76_3640
+                                rect(width='40' height='40' fill='white')
+                .answer 
+                    p Sí, entendemos que tu sitio web puede crecer con el tiempo y nuestras soluciones de hosting están diseñadas para ser escalables. Ofrecemos planes de hosting que te permiten aumentar la capacidad de almacenamiento, la potencia del servidor y los recursos a medida que tu sitio web se expande y requiere mayor rendimiento. Estaremos contigo en cada etapa del crecimiento de tu sitio para asegurarnos de que siempre tengas la infraestructura adecuada para satisfacer tus necesidades.
