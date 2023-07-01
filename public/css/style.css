@@ -167,7 +167,11 @@ a {
 }
 
 input,
-textarea, select {
+textarea,
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   display: block;
   padding: 16px;
   color: var(--text-color);
@@ -175,11 +179,14 @@ textarea, select {
   border: 1px solid #e7e7e7;
   width: 100%;
   border-radius: 4px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
 
 select {
   max-height: 58px;
+  background-image: url("/img/icons/down.svg");
+  background-position: 95% center; /*Positioning*/
+  background-repeat: no-repeat;
 }
 
 label {
@@ -190,7 +197,7 @@ label {
 }
 
 .required {
-  color: #D80000;
+  color: #d80000;
 }
 
 .form-group {
@@ -846,7 +853,7 @@ label {
     grid-template-columns: repeat(1, 1fr);
     gap: 32px;
   }
-  
+
   .clientes .logo {
     padding: 50px 0;
   }
@@ -1043,7 +1050,7 @@ label {
 
   .cta .cta-button {
     width: 150px;
-    height: 150px; 
+    height: 150px;
   }
 }
 
@@ -1240,7 +1247,8 @@ label {
   /* height: 100% !important; */
 }
 
-.swiper-autoheight, .swiper-autoheight .swiper-slide {
+.swiper-autoheight,
+.swiper-autoheight .swiper-slide {
   height: 100% !important;
 }
 
@@ -1265,8 +1273,6 @@ label {
   }
 }
 
-
-
 /* Accordeon */
 /* .faq p:first-of-type{
   margin-bottom: 80px;
@@ -1274,13 +1280,13 @@ label {
 
 .faq-accordeon {
   max-width: 100%;
-  border-bottom: 2px solid #B8B8B8;
+  border-bottom: 2px solid #b8b8b8;
   cursor: pointer;
   margin-bottom: -16px;
 }
 
 .faq-accordeon:last-of-type {
-  margin-bottom:0;
+  margin-bottom: 0;
 }
 
 .question {
@@ -1299,19 +1305,19 @@ label {
 
 .faq-accordeon.active .answer {
   max-height: 300px;
-  animation: fade .6s ease-in-out;
+  animation: fade 0.6s ease-in-out;
   padding-bottom: 32px;
 }
 
 .faq-accordeon svg {
-  transition: transform .3s ease-in;
+  transition: transform 0.3s ease-in;
 }
 
 .faq-accordeon.active svg {
   transform: rotate(90deg);
 }
 
-@media(max-width: 743px) {
+@media (max-width: 743px) {
   .question {
     padding: 22px 0;
   }

@@ -199,6 +199,10 @@
   margin-top: 32px;
 }
 
+.contact-card button:hover {
+  cursor: pointer;
+}
+
 @media (max-width: 743px) {
   .contact-card {
     padding: 50px 32px;
@@ -621,9 +625,8 @@
 }
 
 .portfolio-content .container {
-  display: grid;
-  grid-template-columns: 70% 30%;
-  gap: 64px;
+  display: flex;
+  gap: 120px;
 }
 
 #feautured-image {
@@ -638,24 +641,58 @@
   display: flex;
   flex-direction: column;
   gap: var(--normal-gap);
+  flex-basis: 70%;
 }
 
-.portfolio-content .sidebar h3 {
+.portfolio-content .portfolio-gallery {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin: 32px 0;
+} 
+
+.portfolio-content .portfolio-gallery img {
+  max-width: calc(50% - 16px);
+  border-radius: 4px;
+}
+
+.portfolio-content .sidebar h3:first-child {
   margin-bottom: 32px;
 }
 
+.portfolio-content .portafolio-card{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 32px; 
+}
+
+.portfolio-content .portafolio-card:last-child {
+  margin-bottom: 0; 
+}
+
+.portfolio-content .portafolio-card img {
+  max-width:100%;
+  width: 100%;
+}
+
 @media (max-width: 1024px) {
+  .portfolio-content {
+    padding: 120px 0 80px;
+  }
   .portfolio-content .container {
     gap: 32px;
-    grid-template-columns: 60% 40%;
+  }
+  .portfolio-content .text {
+    flex-basis: 70%;
   }
   #feautured-image {
     max-width: 70%;
     right: 15%;
     bottom: -420px;
   }
-  .portfolio-content {
-    padding: 120px 0;
+  .portfolio-content .portfolio-gallery  {
+    margin: 22px 0;
   }
 }
 
@@ -674,7 +711,41 @@
     padding-top: 50px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    justify-items: center;
+    justify-items: stretch;
     gap: 50px;
   }
+
+  .portafolio-card img {
+    max-height: 380px;
+  }
+
+  .portfolio-content .portfolio-gallery {
+    flex-direction: column;
+    gap: 22px;
+  } 
+
+  .portfolio-content .portfolio-gallery img {
+    max-width: 100%;
+  }
+}
+
+/* Politicas de Privacidad */
+.politicas {
+  padding: 80px 0;
+}
+
+.politicas .container {
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+
+.politicas h3 {
+  margin-top: 22px;
+  margin-bottom: 16px;
+}
+
+@media(max-width: 1024px) {
+  .politicas {
+    padding: 50px 0;
+  } 
 }

@@ -21,10 +21,23 @@ block contenido
     section.portfolio-content
         .container 
             .text
-                h3 #{resultado.categoria}
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                p 
+                    b Cliente: 
+                    a #{resultado.cliente}
+                p 
+                    b Tecnologías: 
+                    a() #{resultado.tecnologia}
+                p 
+                    b Fecha de Lanzamiento: 
+                    a #{resultado.fecha_lanzamiento}
+                p Creamigas es una financiera dedicada a otorgar créditos grupales a mujeres emprendedoras mexicanas para que pueden crecer sus negocios. En este proyecto se desarrollo un sitio web para que más personas puedan conocer los servicios que se ofrecen. A su vez se desarrollo un simulador de crédito dinámico en el cual el usuario puede visualizar el monto y plazo de sus pagos, así como dejar sus datos, como: Nombre, email, celular e ine, para poder agilizar el proceso de solicitud de crédito. 
 
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                .portfolio-gallery 
+                    img(src=`/img/portafolio/${resultado.cliente}-gallery-1.jpg`, alt="", class="img-fluid")
+                    img(src=`/img/portafolio/${resultado.cliente}-gallery-2.jpg`, alt="", class="img-fluid")
+
+                p Creamigas es una financiera dedicada a otorgar créditos grupales a mujeres emprendedoras mexicanas para que pueden crecer sus negocios. En este proyecto se desarrollo un sitio web para que más personas puedan conocer los servicios que se ofrecen. A su vez se desarrollo un simulador de crédito dinámico en el cual el usuario puede visualizar el monto y plazo de sus pagos, así como dejar sus datos, como: Nombre, email, celular e ine, para poder agilizar el proceso de solicitud de crédito. 
+                p Creamigas es una financiera dedicada a otorgar créditos grupales a mujeres emprendedoras mexicanas para que pueden crecer sus negocios. En este proyecto se desarrollo un sitio web para que más personas puedan conocer los servicios que se ofrecen. A su vez se desarrollo un simulador de crédito dinámico en el cual el usuario puede visualizar el monto y plazo de sus pagos, así como dejar sus datos, como: Nombre, email, celular e ine, para poder agilizar el proceso de solicitud de crédito. 
             .sidebar 
                 h3 Proyectos Recientes
                 each portafolio in portafolios
