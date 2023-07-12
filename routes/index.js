@@ -7,8 +7,11 @@ import {
   paginaContacto,
   paginaDetallePortafolio,
   paginaServicioMantenimiento,
-  paginaTestimoniales,
   paginaServicioHosting, 
+  paginaServicioTienda,
+  paginaServicioLanding,
+  paginaServicioSitio,
+  paginaTestimoniales,
   paginaPoliticasDePrivacidad,
   paginaTerminosCondiciones
 } from "../controllers/paginasController.js";
@@ -24,8 +27,11 @@ router.get("/", paginaIncio);
 router.get("/nosotros", paginaNosotros);
 
 router.get("/servicios", paginaServicios);
-router.get("/servicios/mantenimiento", paginaServicioMantenimiento);
 router.get("/servicios/hosting", paginaServicioHosting);
+router.get("/servicios/mantenimiento", paginaServicioMantenimiento);
+router.get("/servicios/tienda-online", paginaServicioTienda);
+router.get("/servicios/landing-page", paginaServicioLanding);
+router.get("/servicios/sitio-web", paginaServicioSitio);
 
 router.get("/portafolio", paginaPortafolio);
 router.get("/portafolio/:slug", paginaDetallePortafolio);

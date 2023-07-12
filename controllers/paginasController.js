@@ -48,6 +48,30 @@ const paginaServicioHosting = (req, res) => {
   });
 };
 
+const paginaServicioTienda = (req, res) => {
+  res.render("servicioTienda", {
+    pagina: "Tienda Online",
+    css: "/css/internal.css",
+    faq: true,
+  });
+};
+
+const paginaServicioLanding = (req, res) => {
+  res.render("servicioLanding", {
+    pagina: "Landing Page",
+    css: "/css/internal.css",
+    faq: true,
+  });
+};
+
+const paginaServicioSitio = (req, res) => {
+  res.render("servicioSitio", {
+    pagina: "Sitio Web",
+    css: "/css/internal.css",
+    faq: true,
+  });
+};
+
 const paginaPortafolio = async (req, res) => {
   try {
     const resultado = await Portafolio.findAll();
@@ -124,6 +148,9 @@ export {
   paginaContacto,
   paginaDetallePortafolio,
   paginaServicioMantenimiento,
+  paginaServicioTienda,
+  paginaServicioLanding,
+  paginaServicioSitio,
   paginaTestimoniales,
   paginaServicioHosting,
   paginaPoliticasDePrivacidad,

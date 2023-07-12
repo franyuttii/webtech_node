@@ -23,6 +23,9 @@ export const Portafolio = db.define("portafolios", {
     imagen_destacada: {
       type: Sequelize.STRING,
     },
+    descripcion_corta: {
+      type: Sequelize.STRING,
+    },
     descripcion: {
       type: Sequelize.STRING,
     },

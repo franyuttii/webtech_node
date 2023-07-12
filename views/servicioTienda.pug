@@ -1,0 +1,236 @@
+extends ./layout/index
+
+block contenido
+    main.hero 
+        .container 
+            .hero-text 
+                h1
+                    | Desarrollo web 
+                    br
+                    span.gradient Tienda Online.
+            a(class="hero-button", href="#pricing")
+                svg(width='104' height='104' viewbox='0 0 104 104' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    g(clip-path='url(#clip0_278_484)')
+                        path(d='M50.9997 45V56.17L46.1197 51.29C45.7297 50.9 45.0897 50.9 44.6997 51.29C44.3097 51.68 44.3097 52.31 44.6997 52.7L51.2897 59.29C51.6797 59.68 52.3097 59.68 52.6997 59.29L59.2897 52.7C59.6797 52.31 59.6797 51.68 59.2897 51.29C58.8997 50.9 58.2697 50.9 57.8797 51.29L52.9997 56.17V45C52.9997 44.45 52.5497 44 51.9997 44C51.4497 44 50.9997 44.45 50.9997 45Z' fill='#B8B8B8')
+                    rect(x='0.5' y='0.5' width='103' height='103' rx='51.5' stroke='#B8B8B8')
+                defs
+                    clippath#clip0_278_484
+                    rect(width='24' height='24' fill='white' transform='translate(40 40)')
+            .shadow 
+
+    .service-feautured-image 
+        .container 
+            img(src="/img/portafolio/feautured-creamigas.png", alt="Tienda Online Veracruz", class="img-fluid service")
+
+
+    section.nosotros 
+        .container 
+            .about-img
+                img(src="/img/tienda.png", alt="Desarrollo Tienda Online Veracruz", class="img-fluid about-service")
+            .about-text
+                h2 
+                    | Potencia tus ventas con una 
+                    br
+                    span.gradient tienda online
+                p Somos una agencia de servicios digitales enfocada en el desarrollo Web. Nos encargamos de diseñar y desarrollar plataformas web completamente a medida de tus necesidades. Si has decido dar el salto a internet o si ya lo hiciste pero quieres mejorar lo que tienes, no busques más, nosotros podemos ayudarte.
+                a(href="/contacto", class="btn primary-btn") Más Información
+   
+    section.pricing#pricing
+            .container 
+                .contenedor-pricing
+                    .pricing-table 
+                        img(src="/img/mantenimiento/starter.svg", alt="")
+                        h3 Starter 
+                        p Lo esencial para que tu sitio este seguro y funcione correctamente.
+                        h2 
+                            |$35,000
+                        ul 
+                            li 
+                                img(src="/img/icons/checkmark.svg", alt="Característica")
+                                |Hasta 5GB. de almacenamiento.
+                            li 
+                                img(src="/img/icons/checkmark.svg", alt="Característica")
+                                |Hasta 7 emails empresariales.
+                            li 
+                                img(src="/img/icons/checkmark.svg", alt="Característica")
+                                |Banda Ancha Ilimitada.
+                            li 
+                                img(src="/img/icons/checkmark.svg", alt="Característica")
+                                |SSL gratuito para todos tus dominios.
+                        a(href="#", class="btn secondary-btn") Contratar
+                    .pricing-table 
+                        img(src="/img/mantenimiento/starter.svg", alt="")
+                        h3 Pro 
+                        p Lo esencial que tu sitio web necesita para estar seguro.
+                        h2 
+                            |$31,500
+                        ul 
+                            li 
+                                img(src="/img/icons/checkmark.svg", alt="Característica")
+                                |Hasta 10GB. de almacenamiento.
+                            li 
+                                img(src="/img/icons/checkmark.svg", alt="Característica")
+                                |Hasta 15 emails empresariales.
+                            li 
+                                img(src="/img/icons/checkmark.svg", alt="Característica")
+                                |Banda Ancha Ilimitada.
+                            li 
+                                img(src="/img/icons/checkmark.svg", alt="Característica")
+                                |SSL gratuito para todos tus dominios.
+                        a(href="#", class="btn secondary-btn") Contratar
+                    .pricing-table 
+                        img(src="/img/mantenimiento/starter.svg", alt="")
+                        h3 Premium 
+                        p Todo lo que necesitas para monitorear y hacer crecer tu sitio web.
+                        h2 
+                            |$28,000
+                        ul 
+                            li 
+                                img(src="/img/icons/checkmark.svg", alt="Característica")
+                                |Hasta 20GB. de almacenamiento.
+                            li 
+                                img(src="/img/icons/checkmark.svg", alt="Característica")
+                                |Emails empresariales ilimitados.
+                            li 
+                                img(src="/img/icons/checkmark.svg", alt="Característica")
+                                |Banda Ancha Ilimitada.
+                            li 
+                                img(src="/img/icons/checkmark.svg", alt="Característica")
+                                |SSL gratuito para todos tus dominios.
+                        a(href="#", class="btn secondary-btn") Contratar
+    section.feautures 
+        .container 
+                h2 
+                    |Nuestro servicio 
+                    span.gradient incluye
+                .feautures-container 
+                    .swiper.mySwiper2
+                        .swiper-wrapper
+                            .swiper-slide
+                              .feauture-card
+                                img(src="/img/icons/web-design.svg", alt="")
+                                h4 Diseño Unico
+                                p Diseñamos desde cero y de la mano con nuestros clientes su sitio web para que este pueda reflejar lo que se quiere comunicar a los usuarios.
+                            .swiper-slide
+                                .feauture-card
+                                    img(src="/img/icons/responsive.svg", alt="")
+                                    h4 Sitio Responsivo
+                                    p Ofrecemos todos los servicios necesario para entregar un sitio web de calidad y optimizado para su velocidad y posicionamiento SEO.
+                            .swiper-slide
+                                .feauture-card
+                                    img(src="/img/icons/startup.svg", alt="")
+                                    h4 Sitio Optimizado
+                                    p Para nosotros lo más importante es el éxito de tu proyecto, esto nos ha permitido llegar a más de 60 clientes en México, Canada y Estados Unidos.
+                            .swiper-slide
+                              .feauture-card
+                                img(src="/img/icons/content-manager.svg", alt="")
+                                h4 Gestor de Contenido
+                                p Diseñamos desde cero y de la mano con nuestros clientes su sitio web para que este pueda reflejar lo que se quiere comunicar a los usuarios.
+                            .swiper-slide
+                                .feauture-card
+                                    img(src="/img/icons/optimized.svg", alt="")
+                                    h4 Optimización SEO
+                                    p Ofrecemos todos los servicios necesario para entregar un sitio web de calidad y optimizado para su velocidad y posicionamiento SEO.
+                            .swiper-slide
+                                .feauture-card
+                                    img(src="/img/icons/card-payment.svg", alt="")
+                                    h4 Pagos con tarjeta
+                                    p Ofrecemos todos los servicios necesario para entregar un sitio web de calidad y optimizado para su velocidad y posicionamiento SEO.
+                        .swiper-pagination
+
+
+    section.beneficios
+        .container 
+            .img 
+                img(src="/img/beneficios.png", alt="", class="img-fluid")
+            .txt
+                h2 
+                    |¿Por qué 
+                    span.gradient Nosotros?
+                p Nos aseguramos de entregar los mejores proyectos alineados a alcanzar los objetivos de tu negocio. 
+                .container-beneificios 
+                    .beneficio 
+                        h3 365
+                        span Of “high-performing” level are led by a certified project manager.
+                    .beneficio 
+                        h3 50+
+                        span That meets quality standards required by our users.
+                    .beneficio 
+                        h3 24/7
+                        span Soporte por Correo, Whatsapp y Celular. 
+                    .beneficio 
+                        h3 50+
+                        span Clientes Satisfechos.
+
+    section.faq.dark
+        .container 
+            h2 F.A.Q.
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            .faq-accordeon 
+                .question 
+                    h4 ¿Cuáles son las ventajas de elegir nuestro servicio de hosting web?
+                    svg(width='40' height='40' viewbox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        g(clip-path='url(#clip0_76_3640)')
+                            path(d='M12.3001 35.0168C13.1168 35.8334 14.4335 35.8334 15.2501 35.0168L29.1001 21.1667C29.7501 20.5167 29.7501 19.4667 29.1001 18.8167L15.2501 4.96675C14.4335 4.15008 13.1168 4.15008 12.3001 4.96675C11.4835 5.78341 11.4835 7.10008 12.3001 7.91675L24.3668 20.0001L12.2835 32.0834C11.4835 32.8834 11.4835 34.2168 12.3001 35.0168V35.0168Z' fill='#fff')
+                        defs
+                            clippath#clip0_76_3640
+                                rect(width='40' height='40' fill='white')
+                .answer 
+                    p Nuestro servicio de hosting web ofrece una combinación única de características y beneficios. Proporcionamos un rendimiento de servidor rápido y confiable, soporte técnico las 24 horas del día, los 7 días de la semana, seguridad de vanguardia y una interfaz fácil de usar para gestionar tu sitio web.
+            .faq-accordeon 
+                .question 
+                    h4 ¿Cuál es la capacidad de almacenamiento que ofrecemos en nuestros planes de hosting?
+                    svg(width='40' height='40' viewbox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        g(clip-path='url(#clip0_76_3640)')
+                            path(d='M12.3001 35.0168C13.1168 35.8334 14.4335 35.8334 15.2501 35.0168L29.1001 21.1667C29.7501 20.5167 29.7501 19.4667 29.1001 18.8167L15.2501 4.96675C14.4335 4.15008 13.1168 4.15008 12.3001 4.96675C11.4835 5.78341 11.4835 7.10008 12.3001 7.91675L24.3668 20.0001L12.2835 32.0834C11.4835 32.8834 11.4835 34.2168 12.3001 35.0168V35.0168Z' fill='#fff')
+                        defs
+                            clippath#clip0_76_3640
+                                rect(width='40' height='40' fill='white')
+                .answer 
+                    p Ofrecemos una amplia gama de planes de hosting web que se adaptan a tus necesidades específicas. Nuestros planes varían en capacidad de almacenamiento, desde opciones para sitios web más pequeños hasta planes escalables para proyectos más grandes. Podemos ofrecerte el espacio adecuado para almacenar todos tus archivos y datos.
+            .faq-accordeon 
+                .question 
+                    h4 ¿Cómo garantizamos la seguridad de los sitios web alojados en nuestros servidores?
+                    svg(width='40' height='40' viewbox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        g(clip-path='url(#clip0_76_3640)')
+                            path(d='M12.3001 35.0168C13.1168 35.8334 14.4335 35.8334 15.2501 35.0168L29.1001 21.1667C29.7501 20.5167 29.7501 19.4667 29.1001 18.8167L15.2501 4.96675C14.4335 4.15008 13.1168 4.15008 12.3001 4.96675C11.4835 5.78341 11.4835 7.10008 12.3001 7.91675L24.3668 20.0001L12.2835 32.0834C11.4835 32.8834 11.4835 34.2168 12.3001 35.0168V35.0168Z' fill='#fff')
+                        defs
+                            clippath#clip0_76_3640
+                                rect(width='40' height='40' fill='white')
+                .answer 
+                    p La seguridad es una prioridad fundamental para nosotros. Implementamos medidas de seguridad avanzadas, como cortafuegos, monitoreo constante, detección y eliminación de malware, y actualizaciones de seguridad regulares. También ofrecemos certificados SSL gratuitos para proteger la información sensible de tus visitantes.
+            .faq-accordeon 
+                .question 
+                    h4 ¿Qué nivel de soporte técnico ofrecemos a nuestros clientes?
+                    svg(width='40' height='40' viewbox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        g(clip-path='url(#clip0_76_3640)')
+                            path(d='M12.3001 35.0168C13.1168 35.8334 14.4335 35.8334 15.2501 35.0168L29.1001 21.1667C29.7501 20.5167 29.7501 19.4667 29.1001 18.8167L15.2501 4.96675C14.4335 4.15008 13.1168 4.15008 12.3001 4.96675C11.4835 5.78341 11.4835 7.10008 12.3001 7.91675L24.3668 20.0001L12.2835 32.0834C11.4835 32.8834 11.4835 34.2168 12.3001 35.0168V35.0168Z' fill='#fff')
+                        defs
+                            clippath#clip0_76_3640
+                                rect(width='40' height='40' fill='white')
+                .answer 
+                    p Nuestro equipo de soporte técnico altamente capacitado está disponible las 24/7 para brindarte asistencia. Ya sea que necesites ayuda con la configuración inicial, la resolución de problemas técnicos o simplemente tengas preguntas, estamos aquí para ayudarte por chat en vivo, correo electrónico o teléfono.
+            .faq-accordeon 
+                .question 
+                    h4 ¿Cómo podemos ayudarte a migrar tu sitio web desde otro proveedor de hosting?
+                    svg(width='40' height='40' viewbox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        g(clip-path='url(#clip0_76_3640)')
+                            path(d='M12.3001 35.0168C13.1168 35.8334 14.4335 35.8334 15.2501 35.0168L29.1001 21.1667C29.7501 20.5167 29.7501 19.4667 29.1001 18.8167L15.2501 4.96675C14.4335 4.15008 13.1168 4.15008 12.3001 4.96675C11.4835 5.78341 11.4835 7.10008 12.3001 7.91675L24.3668 20.0001L12.2835 32.0834C11.4835 32.8834 11.4835 34.2168 12.3001 35.0168V35.0168Z' fill='#fff')
+                        defs
+                            clippath#clip0_76_3640
+                                rect(width='40' height='40' fill='white')
+                .answer 
+                    p Entendemos que la migración de tu sitio web puede ser complicada. Sin embargo, nuestro equipo de expertos en migración puede facilitar el proceso. Trabajaremos contigo para transferir todos tus archivos, bases de datos y configuraciones sin problemas, minimizando cualquier tiempo de inactividad.
+            .faq-accordeon 
+                .question 
+                    h4 ¿Ofrecemos opciones de escalabilidad para adaptarnos al crecimiento de tu sitio web?
+                    svg(width='40' height='40' viewbox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        g(clip-path='url(#clip0_76_3640)')
+                            path(d='M12.3001 35.0168C13.1168 35.8334 14.4335 35.8334 15.2501 35.0168L29.1001 21.1667C29.7501 20.5167 29.7501 19.4667 29.1001 18.8167L15.2501 4.96675C14.4335 4.15008 13.1168 4.15008 12.3001 4.96675C11.4835 5.78341 11.4835 7.10008 12.3001 7.91675L24.3668 20.0001L12.2835 32.0834C11.4835 32.8834 11.4835 34.2168 12.3001 35.0168V35.0168Z' fill='#fff')
+                        defs
+                            clippath#clip0_76_3640
+                                rect(width='40' height='40' fill='white')
+                .answer 
+                    p Sí, entendemos que tu sitio web puede crecer con el tiempo y nuestras soluciones de hosting están diseñadas para ser escalables. Ofrecemos planes de hosting que te permiten aumentar la capacidad de almacenamiento, la potencia del servidor y los recursos a medida que tu sitio web se expande y requiere mayor rendimiento. Estaremos contigo en cada etapa del crecimiento de tu sitio para asegurarnos de que siempre tengas la infraestructura adecuada para satisfacer tus necesidades.
+
+    include ./components/service-cta

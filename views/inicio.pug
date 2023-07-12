@@ -29,38 +29,38 @@ block contenido
                 h2 
                     | Nuestros 
                     span.gradient Servicios
-
                 a(href="/portafolio", class="btn secondary-btn") Ver Todos 
             .contenedor-servicios 
                 a(href="#") 
                     .servicio.website
                         h4 Servicio
                         h3 Sitio Web
-                        img(src="/img/services/mockup-1.png", alt="Desarrollo Web", class="left")
-                        img(src="/img/services/mockup-2.png", alt="Desarrollo Web Veracruz", class="right")
-                a(href="#") 
+                        img(src="/img/services/mockup-option-1.png", alt="Desarrollo Web", class="left")
+                        img(src="/img/services/mockup-option-2.png", alt="Desarrollo Web Veracruz", class="right")
+                a(href="/servicios/landing") 
                     .servicio.landing
                         h4 Servicio
                         h3 Landing Page
-                        img(src="/img/services/mockup-1.png", alt="Desarrollo Web", class="left")
-                        img(src="/img/services/mockup-2.png", alt="Desarrollo Web Veracruz", class="right")
-                a(href="#") 
+                        img(src="/img/services/mockup-option-1.png", alt="Desarrollo Web", class="left")
+                        img(src="/img/services/mockup-option-2.png", alt="Desarrollo Web Veracruz", class="right")
+                a(href="/tienda") 
                     .servicio.tienda
                         h4 Servicio
                         h3 Tienda Online
-                        img(src="/img/services/mockup-1.png", alt="Desarrollo Web", class="left")
-                        img(src="/img/services/mockup-2.png", alt="Desarrollo Web Veracruz", class="right")
+                        img(src="/img/services/mockup-option-1.png", alt="Desarrollo Web", class="left")
+                        img(src="/img/services/mockup-option-2.png", alt="Desarrollo Web Veracruz", class="right")
                 a(href="#") 
                     .servicio.app
                         h4 Servicio
                         h3 Web App’s
-                        img(src="/img/services/mockup-1.png", alt="Desarrollo Web", class="left")
-                        img(src="/img/services/mockup-2.png", alt="Desarrollo Web Veracruz", class="right")
+                        img(src="/img/services/mockup-option-1.png", alt="Desarrollo Web", class="left")
+                        img(src="/img/services/mockup-option-2.png", alt="Desarrollo Web Veracruz", class="right")
 
     section.nosotros 
         .container 
             .about-img
-                img(src="/img/about.jpg", alt="Agencia de desarrollo web en Veracruz" class="img-fluid")
+                video(src="/video/la-percha.mp4", width="100%", controls, autoplay, loop, muted) 
+                //- img(src="/img/about.jpg", alt="Agencia de desarrollo web en Veracruz" class="img-fluid")
             .about-text
                 h2 
                     |Conoce más sobre 
@@ -87,18 +87,17 @@ block contenido
                 a.btn.primary-btn(href="#") Saber Más
             .clientes-logo 
                 .logo 
-                    img(src="/img/clients/hilton.png", alt="")
+                    img(src="/img/clients/hilton.png", alt="Hilton Garden Inn")
                 .logo 
-                    img(src="/img/clients/city-express.png", alt="")
+                    img(src="/img/clients/qer.png", alt="QuimiVer")
                 .logo 
-                    img(src="/img/clients/qer.png", alt="")
+                    img(src="/img/clients/qer.png", alt="Quimiver")
                 .logo 
-                    img(src="/img/clients/addme.png", alt="")
+                    img(src="/img/clients/addme.png", alt="AddMe")
                 .logo 
-                    img(src="/img/clients/capitol-business.png", alt="")
+                    img(src="/img/clients/capitol-business.png", alt="Capitol Business Group")
                 .logo 
-                    img(src="/img/clients/creamigas.png", alt="")
-
+                    img(src="/img/clients/creamigas.png", alt="Creamigas")
 
     section.portafolio 
         .container 
@@ -109,27 +108,41 @@ block contenido
                 each portafolio in portafolios
                     a(href=`/portafolio/${portafolio.slug}`) 
                         .portafolio.card(style=`background-image:url("/img/portafolio/${portafolio.imagen}.png");`)
-
-
     
     section.feautures 
         .container 
-                h2 
-                    |¿Por qué 
-                    span.gradient Nosotros?
-                .feautures-container 
-                    .feauture-card
-                        img(src="img/diseno-unico.svg", alt="")
-                        h4 Diseño Unico
-                        p Diseñamos desde cero y de la mano con nuestros clientes su sitio web para que este pueda reflejar lo que se quiere comunicar a los usuarios.
-                    .feauture-card
-                        img(src="img/servicio-360.svg", alt="")
-                        h4 Servicio 360º
-                        p Ofrecemos todos los servicios necesario para entregar un sitio web de calidad y optimizado para su velocidad y posicionamiento SEO.
-                    .feauture-card
-                        img(src="img/clientes.svg", alt="")
-                        h4 Clientes Satisfechos
-                        p Para nosotros lo más importante es el éxito de tu proyecto, esto nos ha permitido llegar a más de 60 clientes en México, Canada y Estados Unidos.
+            h2 
+                |¿Por qué 
+                span.gradient Nosotros?
+            .feautures-container 
+                .swiper.mySwiper2
+                    .swiper-wrapper
+                        .swiper-slide
+                            .feauture-card
+                                img(src="img/diseno-unico.svg", alt="")
+                                h4 Diseño Unico
+                                p Diseñamos desde cero y de la mano con nuestros clientes su sitio web para que este pueda reflejar lo que se quiere comunicar a los usuarios.
+                        .swiper-slide
+                            .feauture-card
+                                img(src="img/servicio-360.svg", alt="")
+                                h4 Servicio 360º
+                                p Ofrecemos todos los servicios necesario para entregar un sitio web de calidad y optimizado para su velocidad y posicionamiento SEO.
+                        .swiper-slide
+                            .feauture-card
+                                img(src="img/clientes.svg", alt="")
+                                h4 Clientes Satisfechos
+                                p Para nosotros lo más importante es el éxito de tu proyecto, esto nos ha permitido llegar a más de 60 clientes en México, Canada y Estados Unidos.
+                        .swiper-slide
+                            .feauture-card
+                                img(src="img/diseno-unico.svg", alt="")
+                                h4 Diseño Unico
+                                p Diseñamos desde cero y de la mano con nuestros clientes su sitio web para que este pueda reflejar lo que se quiere comunicar a los usuarios.
+                        .swiper-slide
+                            .feauture-card
+                                img(src="img/servicio-360.svg", alt="")
+                                h4 Servicio 360º
+                                p Ofrecemos todos los servicios necesario para entregar un sitio web de calidad y optimizado para su velocidad y posicionamiento SEO.
+                    .swiper-pagination
 
     section.cta 
         .cta-image
