@@ -486,7 +486,7 @@ label {
 
 @media (max-width: 743px) {
   .megamenu .container {
-    padding: 22px 0;
+    padding: 22px 0 60px;
     border-bottom: 0;
   }
 
